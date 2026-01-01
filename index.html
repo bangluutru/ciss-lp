@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hiệu Ứng CISS & Gốm Bio-Signaling | Công Nghệ Tương Lai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet"/>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #e0e0e0; overflow-x: hidden; }
+        h1, h2, h3, .brand-font { font-family: 'Orbitron', sans-serif; }
+        .glass-panel { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .neon-glow { text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); }
+        .gradient-text { background: linear-gradient(45deg, #00f2ff, #0066ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .spin-slow { animation: spin 20s linear infinite; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        .particle { position: absolute; border-radius: 50%; pointer-events: none; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00f2ff; }
+
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(0, 242, 255, 0.3); }
+        .tab-active { border-bottom: 2px solid #00f2ff; color: #00f2ff; }
+        .tab-inactive { color: #888; }
+        .tab-inactive:hover { color: #ccc; }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-black">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-cyan-400 text-3xl">science</span>
+                    <span class="brand-font text-xl tracking-wider text-white">QUANTUM<span class="text-cyan-400">BIO</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-baseline space-x-8">
+                        <a class="hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#intro">Giới thiệu</a>
+                        <a class="hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#simulation">Mô phỏng CISS</a>
+                        <a class="hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#technology">Công nghệ Gốm</a>
+                        <a class="hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors" href="#benefits">Ứng dụng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="relative min-h-screen flex items-center justify-center overflow-hidden" id="intro">
+        <!-- Background Image Placeholder (Base64 or URL) -->
+        <div class="absolute inset-0 z-0 opacity-40">
+            <!-- Using a placeholder SVG pattern for background since original gen images are dynamic -->
+            <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <lineargradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#050505"></stop>
+                        <stop offset="50%" stop-color="#1a1a1a"></stop>
+                        <stop offset="100%" stop-color="#050505"></stop>
+                    </lineargradient>
+                    <pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 242, 255, 0.1)" stroke-width="1"></path>
+                    </pattern>
+                </defs>
+                <rect fill="url(#g)" height="100%" width="100%"></rect>
+                <rect fill="url(#grid)" height="100%" width="100%"></rect>
+            </svg>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/80 to-[#050505] z-10"></div>
+        <div class="relative z-20 max-w-5xl mx-auto px-4 text-center">
+            <div class="inline-block px-4 py-1 mb-6 rounded-full glass-panel border-cyan-500/30 text-cyan-400 text-sm font-semibold tracking-wider uppercase animate-pulse">
+                Đột phá Y học Lượng tử
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Hiệu Ứng <span class="gradient-text">CISS</span><br/>
+                &amp; Sức Mạnh Của <span class="text-cyan-400">Spin</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                Khám phá cơ chế <b>Chirality Induced Spin Selectivity</b> (Chọn lọc Spin cảm ứng bởi tính Chirality) – Chìa khóa vàng giúp tế bào ngăn chặn lão hóa, giảm gốc tự do (ROS) và kích hoạt năng lượng sinh học vô tận.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <button class="px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(6,182,212,0.5)] flex items-center justify-center gap-2" onclick="document.getElementById('simulation').scrollIntoView({behavior: 'smooth'})">
+                    <span class="material-symbols-outlined">play_circle</span>
+                    Khám Phá Mô Phỏng
+                </button>
+                <button class="px-8 py-4 glass-panel hover:bg-white/10 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2" onclick="document.getElementById('technology').scrollIntoView({behavior: 'smooth'})">
+                    <span class="material-symbols-outlined">memory</span>
+                    Công Nghệ Bio-Ceramic
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Interactive Simulation Section -->
+    <section class="py-20 relative bg-[#0a0a0a]" id="simulation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Text Content -->
+                <div class="lg:col-span-1 space-y-6">
+                    <h2 class="text-3xl font-bold text-white mb-2">Cơ Chế <span class="text-cyan-400">Lọc Spin</span></h2>
+                    <p class="text-gray-400 text-sm">
+                        Tại ti thể, electron di chuyển qua các protein xoắn ốc (Chiral). Hiệu ứng CISS hoạt động như một "bộ lọc", chỉ cho phép electron có chiều quay (spin) phù hợp đi qua để kết hợp với Oxy.
+                    </p>
+                    <div class="glass-panel p-6 rounded-xl space-y-4">
+                        <h3 class="font-bold text-white flex items-center gap-2">
+                            <span class="material-symbols-outlined text-yellow-500">light_mode</span>
+                            Trạng Thái
+                        </h3>
+                        <!-- Toggle Switch -->
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-300">Không có CISS (Hỗn loạn)</span>
+                            <button class="w-16 h-8 bg-gray-600 rounded-full relative transition-colors duration-300 focus:outline-none" id="toggleSim">
+                                <div class="w-6 h-6 bg-white rounded-full absolute top-1 left-1 transition-transform duration-300 shadow-md" id="toggleKnob"></div>
+                            </button>
+                            <span class="text-sm text-cyan-400 font-bold">Kích hoạt CISS</span>
+                        </div>
+                        <div class="text-xs p-3 rounded bg-red-900/30 text-red-300 border border-red-800" id="statusText">
+                            <b>CẢNH BÁO:</b> Dòng electron hỗn loạn. Phản ứng với Oxy tạo ra Gốc Tự Do (ROS). Gây stress oxy hóa.
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-white/10">
+                            <div class="flex justify-between items-center text-sm mb-1">
+                                <span class="text-gray-400">Mức độ ROS (Độc tố):</span>
+                                <span class="text-red-500 font-bold" id="rosLevel">Cao</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="bg-red-500 h-2 rounded-full transition-all duration-500" id="rosBar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="flex justify-between items-center text-sm mb-1">
+                                <span class="text-gray-400">Hiệu suất ATP (Năng lượng):</span>
+                                <span class="text-yellow-500 font-bold" id="atpLevel">Thấp</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="bg-yellow-500 h-2 rounded-full transition-all duration-500" id="atpBar" style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Simulation Visualizer -->
+                <div class="lg:col-span-2 relative h-[500px] bg-black rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                    <canvas class="absolute inset-0 w-full h-full" id="cissCanvas"></canvas>
+                    <!-- Labels Overlay -->
+                    <div class="absolute top-4 left-4 text-xs text-gray-500 uppercase tracking-widest font-mono">Nguồn Electron</div>
+                    <div class="absolute top-4 left-1/2 -translate-x-1/2 text-xs text-gray-500 uppercase tracking-widest font-mono">Protein Xoắn Ốc</div>
+                    <div class="absolute top-4 right-4 text-xs text-gray-500 uppercase tracking-widest font-mono">Ti Thể (Oxy)</div>
+                    <!-- Legend -->
+                    <div class="absolute bottom-4 left-4 bg-black/80 px-3 py-2 rounded text-xs text-gray-300 flex gap-4">
+                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-white"></span> Electron</div>
+                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_5px_red]"></span> ROS (Hại)</div>
+                        <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_5px_cyan]"></span> H2O (Lợi)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Technology Explainer -->
+    <section class="py-24 bg-[#050505]" id="technology">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-cyan-500 font-bold tracking-widest uppercase text-sm">Công Nghệ Lõi</span>
+                <h2 class="text-4xl font-bold text-white mt-2">Vật Liệu <span class="gradient-text">Bio-Signaling</span></h2>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                    Dựa trên các bằng sáng chế JP 2013220963, JP 2018008882 và JP 5925025. Sự kết hợp giữa Tourmaline và Gốm hồng ngoại xa (FIR) tạo ra môi trường lý tưởng để kích hoạt CISS.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Visual -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <div class="relative rounded-2xl overflow-hidden aspect-video border border-white/10 bg-gray-900">
+                        <!-- Placeholder for ceramic structure image -->
+                        <div class="w-full h-full flex items-center justify-center bg-gray-800 text-gray-600">
+                            <span class="material-symbols-outlined text-6xl opacity-20">diamond</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Cấu trúc vi tinh thể Tourmaline</h4>
+                                <p class="text-sm text-cyan-300">Phát xạ điện trường vi mô &amp; Ion âm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Features Accordion -->
+                <div class="space-y-4">
+                    <!-- Feature 1 -->
+                    <div class="glass-panel rounded-lg p-1 transition-all hover:bg-white/5 cursor-pointer" onclick="toggleAccordion('acc1')">
+                        <div class="flex items-center p-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center mr-4 text-blue-400">
+                                <span class="material-symbols-outlined">waves</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-semibold text-white">Bức Xạ Hồng Ngoại Xa (FIR)</h3>
+                                <p class="text-sm text-gray-400">Cộng hưởng 4-14 micromet</p>
+                            </div>
+                            <span class="material-symbols-outlined text-gray-500 transform transition-transform" id="icon-acc1">expand_more</span>
+                        </div>
+                        <div class="hidden px-4 pb-4 pl-[4.5rem] text-gray-300 text-sm border-l-2 border-blue-500/30 ml-8" id="acc1">
+                            Năng lượng FIR phá vỡ các cụm nước lớn thành các cụm nhỏ, tạo điều kiện dao động cộng hưởng giúp sắp xếp lại cấu trúc nước nội bào.
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="glass-panel rounded-lg p-1 transition-all hover:bg-white/5 cursor-pointer" onclick="toggleAccordion('acc2')">
+                        <div class="flex items-center p-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-900/50 flex items-center justify-center mr-4 text-purple-400">
+                                <span class="material-symbols-outlined">bolt</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-semibold text-white">Hiệu Ứng Áp Điện (Piezoelectric)</h3>
+                                <p class="text-sm text-gray-400">Dòng điện sinh học 0.06mA</p>
+                            </div>
+                            <span class="material-symbols-outlined text-gray-500 transform transition-transform" id="icon-acc2">expand_more</span>
+                        </div>
+                        <div class="hidden px-4 pb-4 pl-[4.5rem] text-gray-300 text-sm border-l-2 border-purple-500/30 ml-8" id="acc2">
+                            Các tinh thể Tourmaline khi chịu áp lực nhẹ hoặc nhiệt độ cơ thể sẽ phát ra dòng điện yếu, giúp định hướng các lưỡng cực nước, hỗ trợ tạo cầu nối Chiral.
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="glass-panel rounded-lg p-1 transition-all hover:bg-white/5 cursor-pointer" onclick="toggleAccordion('acc3')">
+                        <div class="flex items-center p-4">
+                            <div class="w-12 h-12 rounded-full bg-cyan-900/50 flex items-center justify-center mr-4 text-cyan-400">
+                                <span class="material-symbols-outlined">water_drop</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-semibold text-white">Cấu Trúc Hóa Nước (EZ Water)</h3>
+                                <p class="text-sm text-gray-400">Tạo môi trường Chiral</p>
+                            </div>
+                            <span class="material-symbols-outlined text-gray-500 transform transition-transform" id="icon-acc3">expand_more</span>
+                        </div>
+                        <div class="hidden px-4 pb-4 pl-[4.5rem] text-gray-300 text-sm border-l-2 border-cyan-500/30 ml-8" id="acc3">
+                            <div class="w-full h-32 bg-gray-800 rounded mb-2 border border-white/10 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-4xl text-cyan-500/50">hexagon</span>
+                            </div>
+                            Nước được cấu trúc hóa thành dạng lục giác (Exclusion Zone) hoạt động như một môi trường chiral trung gian, khuếch đại hiệu ứng lọc spin của protein.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clinical Benefits Dashboard -->
+    <section class="py-20 bg-gradient-to-b from-[#050505] to-[#0f0f0f]" id="benefits">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Hiệu Quả <span class="text-cyan-400">Lâm Sàng</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Balance -->
+                <div class="feature-card glass-panel rounded-2xl overflow-hidden group">
+                    <div class="h-48 overflow-hidden relative bg-gray-900">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-yellow-500/20">accessibility_new</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="material-symbols-outlined text-yellow-400 text-3xl mb-2">accessibility_new</span>
+                            <h3 class="text-xl font-bold text-white">Thăng Bằng &amp; Thần Kinh</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-400 text-sm mb-4">Cải thiện tốc độ dẫn truyền thần kinh nhờ giảm nhiễu loạn spin trong dòng ion.</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Tăng độ ổn định tư thế</li>
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Phản xạ nhanh nhạy hơn</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Card 2: Circulation -->
+                <div class="feature-card glass-panel rounded-2xl overflow-hidden group">
+                    <div class="h-48 overflow-hidden relative bg-gray-900">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-red-500/20">vital_signs</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="material-symbols-outlined text-red-400 text-3xl mb-2">vital_signs</span>
+                            <h3 class="text-xl font-bold text-white">Vi Tuần Hoàn</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-400 text-sm mb-4">Tăng điện thế Zeta hồng cầu, giảm độ nhớt của máu và ngăn chặn kết tụ.</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Lưu thông máu trơn tru</li>
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Cung cấp oxy tối ưu</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Card 3: Sleep & Anti-Aging -->
+                <div class="feature-card glass-panel rounded-2xl overflow-hidden group">
+                    <div class="h-48 overflow-hidden relative bg-gray-900">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-purple-500/20">bedtime</span>
+                        </div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="material-symbols-outlined text-purple-400 text-3xl mb-2">bedtime</span>
+                            <h3 class="text-xl font-bold text-white">Giấc Ngủ &amp; Chống Lão Hóa</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-400 text-sm mb-4">Giảm ROS bảo vệ DNA ti thể, hỗ trợ hệ thống Glymphatic thải độc não khi ngủ.</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Ngủ sâu hơn</li>
+                            <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Chậm quá trình lão hóa tế bào</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 bg-[#020202]">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm mb-4">Dữ liệu dựa trên báo cáo nghiên cứu chuyên sâu về Hiệu ứng CISS và các bằng sáng chế liên quan.</p>
+            <div class="flex flex-wrap justify-center gap-4 text-xs text-gray-600 font-mono">
+                <span class="border border-gray-800 px-2 py-1 rounded">JP 5925025</span>
+                <span class="border border-gray-800 px-2 py-1 rounded">JP 2013220963</span>
+                <span class="border border-gray-800 px-2 py-1 rounded">JP 2018008882</span>
+                <span class="border border-gray-800 px-2 py-1 rounded">JP 6859036</span>
+            </div>
+            <div class="mt-8 text-gray-700 text-xs">
+                © 2025 CISS Research Initiative. Bio-Signaling Ceramics Application.
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript for Simulation & Interaction -->
+    <script>
+        // --- Accordion Logic ---
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            // Toggle current
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                icon.classList.add('text-cyan-400');
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+                icon.classList.remove('text-cyan-400');
+            }
+        }
+
+        // --- CISS Simulation Logic ---
+        const canvas = document.getElementById('cissCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let width, height;
+        let particles = [];
+        let cissActive = false;
+        let oxygenMolecules = [];
+        
+        // Resize Handler
+        function resize() {
+            if (!canvas.parentElement) return;
+            width = canvas.parentElement.clientWidth;
+            height = canvas.parentElement.clientHeight;
+            canvas.width = width;
+            canvas.height = height;
+            initOxygen();
+        }
+        window.addEventListener('resize', resize);
+
+        // Simulation State Toggle
+        const toggleBtn = document.getElementById('toggleSim');
+        const toggleKnob = document.getElementById('toggleKnob');
+        const statusText = document.getElementById('statusText');
+        const rosBar = document.getElementById('rosBar');
+        const atpBar = document.getElementById('atpBar');
+        const rosLevel = document.getElementById('rosLevel');
+        const atpLevel = document.getElementById('atpLevel');
+
+        toggleBtn.addEventListener('click', () => {
+            cissActive = !cissActive;
+            
+            // Update UI
+            if (cissActive) {
+                toggleBtn.classList.remove('bg-gray-600');
+                toggleBtn.classList.add('bg-cyan-600');
+                toggleKnob.style.transform = 'translateX(32px)';
+                
+                statusText.innerHTML = `<b>TRẠNG THÁI TỐI ƯU:</b> Lớp nước cấu trúc lục giác kích hoạt CISS. Spin được lọc. ROS bị triệt tiêu. Sản sinh Nước tinh khiết.`;
+                statusText.className = "text-xs p-3 rounded bg-cyan-900/30 text-cyan-300 border border-cyan-800";
+                
+                rosBar.style.width = '10%';
+                rosBar.classList.replace('bg-red-500', 'bg-green-500');
+                rosLevel.textContent = 'Thấp (An toàn)';
+                rosLevel.className = 'text-green-500 font-bold';
+                
+                atpBar.style.width = '95%';
+                atpLevel.textContent = 'Tối Đa';
+            } else {
+                toggleBtn.classList.add('bg-gray-600');
+                toggleBtn.classList.remove('bg-cyan-600');
+                toggleKnob.style.transform = 'translateX(0)';
+                
+                statusText.innerHTML = `<b>CẢNH BÁO:</b> Dòng electron hỗn loạn. Phản ứng với Oxy tạo ra Gốc Tự Do (ROS). Gây stress oxy hóa.`;
+                statusText.className = "text-xs p-3 rounded bg-red-900/30 text-red-300 border border-red-800";
+                
+                rosBar.style.width = '90%';
+                rosBar.classList.replace('bg-green-500', 'bg-red-500');
+                rosLevel.textContent = 'Cao (Nguy hiểm)';
+                rosLevel.className = 'text-red-500 font-bold';
+                
+                atpBar.style.width = '30%';
+                atpLevel.textContent = 'Thấp';
+            }
+        });
+
+        // Particle Class
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = 0;
+                this.y = height / 2 + (Math.random() - 0.5) * 100;
+                this.vx = 2 + Math.random() * 2;
+                this.vy = (Math.random() - 0.5) * 2;
+                this.spin = Math.random() > 0.5 ? 1 : -1; // 1 = Up (Correct), -1 = Down (Wrong)
+                this.radius = 3;
+                this.state = 'electron'; // electron, ros, water
+                this.life = 100;
+                this.color = '#ffffff';
+            }
+
+            update() {
+                if (this.state === 'electron') {
+                    this.x += this.vx;
+                    
+                    // Helix interaction zone (center of screen)
+                    if (this.x > width * 0.3 && this.x < width * 0.7) {
+                        // Helix Sine wave path
+                        const centerY = height / 2;
+                        const helixY = centerY + Math.sin(this.x * 0.05) * 50;
+                        
+                        if (cissActive) {
+                            // CISS Mode: Filter Spin
+                            if (this.spin === 1) {
+                                // Correct spin: Align to helix
+                                this.y += (helixY - this.y) * 0.1;
+                                this.color = '#00f2ff'; // Cyan for aligned
+                            } else {
+                                // Wrong spin: Blocked or Bounced
+                                this.vx *= -0.5; // Bounce back
+                                this.y += (Math.random() - 0.5) * 5; // Jitter
+                                this.color = '#555'; // Grey for blocked
+                                if (this.vx > -0.1 && this.vx < 0.1) this.reset(); // Respawn if stuck
+                            }
+                        } else {
+                            // Chaos Mode: Random movement, no filtering
+                            this.y += Math.sin(this.x * 0.1) * 2;
+                            this.color = this.spin === 1 ? '#ddd' : '#aaa';
+                        }
+                    }
+
+                    // Oxygen Interaction Zone (Right side)
+                    if (this.x > width * 0.8) {
+                        // Find nearest oxygen
+                        let hit = false;
+                        oxygenMolecules.forEach(oxy => {
+                            const dx = this.x - oxy.x;
+                            const dy = this.y - oxy.y;
+                            const dist = Math.sqrt(dx*dx + dy*dy);
+                            
+                            if (dist < 30) {
+                                hit = true;
+                                if (cissActive && this.spin === 1) {
+                                    // Success -> Water
+                                    this.state = 'water';
+                                    this.vx = 1;
+                                    this.vy = (Math.random() - 0.5);
+                                    this.color = '#00ffff';
+                                    oxy.pulse = 10; // Visual feedback on oxy
+                                } else {
+                                    // Fail -> ROS
+                                    this.state = 'ros';
+                                    this.vx = 0.5;
+                                    this.vy = (Math.random() - 0.5) * 3;
+                                    this.color = '#ff0000';
+                                    oxy.shake = 10;
+                                }
+                            }
+                        });
+                        
+                        if (!hit && this.x > width) this.reset();
+                    }
+                } else if (this.state === 'water' || this.state === 'ros') {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    this.life--;
+                    if (this.life <= 0 || this.x > width) this.reset();
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                
+                // Glow effect
+                if (this.state === 'water') {
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = '#00ffff';
+                } else if (this.state === 'ros') {
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = '#ff0000';
+                } else if (cissActive && this.spin === 1 && this.x > width * 0.3) {
+                    ctx.shadowBlur = 5;
+                    ctx.shadowColor = '#00f2ff';
+                } else {
+                    ctx.shadowBlur = 0;
+                }
+                
+                ctx.fill();
+                ctx.shadowBlur = 0; // Reset
+            }
+        }
+
+        function initOxygen() {
+            oxygenMolecules = [];
+            for (let i = 0; i < 3; i++) {
+                oxygenMolecules.push({
+                    x: width * 0.85,
+                    y: height / 2 + (i - 1) * 80,
+                    pulse: 0,
+                    shake: 0
+                });
+            }
+        }
+
+        // Draw Static Helix Background
+        function drawHelix() {
+            ctx.strokeStyle = '#222';
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            const centerY = height / 2;
+            for (let x = width * 0.3; x < width * 0.7; x+=5) {
+                const y1 = centerY + Math.sin(x * 0.05) * 50;
+                const y2 = centerY + Math.sin(x * 0.05 + Math.PI) * 50;
+                if (x === width * 0.3) ctx.moveTo(x, y1);
+                else ctx.lineTo(x, y1);
+            }
+            ctx.stroke();
+            
+            ctx.beginPath();
+            for (let x = width * 0.3; x < width * 0.7; x+=5) {
+                const y2 = centerY + Math.sin(x * 0.05 + Math.PI) * 50;
+                if (x === width * 0.3) ctx.moveTo(x, y2);
+                else ctx.lineTo(x, y2);
+            }
+            ctx.stroke();
+        }
+
+        function drawOxygen() {
+            oxygenMolecules.forEach(oxy => {
+                let drawX = oxy.x;
+                let drawY = oxy.y;
+                
+                // Shake effect for ROS creation
+                if (oxy.shake > 0) {
+                    drawX += (Math.random() - 0.5) * 5;
+                    drawY += (Math.random() - 0.5) * 5;
+                    oxy.shake--;
+                    ctx.fillStyle = `rgba(255, 50, 50, ${0.2 + oxy.shake/10})`;
+                } else {
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+                }
+                
+                // Pulse effect for Water creation
+                let radius = 25;
+                if (oxy.pulse > 0) {
+                    radius += oxy.pulse;
+                    oxy.pulse--;
+                    ctx.fillStyle = `rgba(0, 255, 255, ${0.2 + oxy.pulse/10})`;
+                }
+
+                ctx.beginPath();
+                ctx.arc(drawX, drawY, radius, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.fillStyle = '#fff';
+                ctx.font = '16px Arial';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('O2', drawX, drawY);
+            });
+        }
+
+        function animate() {
+            // Fade effect for trails
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+            ctx.fillRect(0, 0, width, height);
+            
+            drawHelix();
+            drawOxygen();
+            
+            // Spawn particles
+            if (particles.length < 100) {
+                particles.push(new Particle());
+            }
+            
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            
+            requestAnimationFrame(animate);
+        }
+
+        // Init
+        // Wait for next frame to ensure DOM is ready for dimensions
+        setTimeout(() => {
+            resize();
+            for(let i=0; i<50; i++) particles.push(new Particle());
+            animate();
+        }, 100);
+
+    </script>
+</body>
+</html>
